@@ -139,9 +139,11 @@ bool CCECClient::OnRegister(void)
   // set the physical address
   SetPhysicalAddress(m_configuration);
 
+#if 0
   // make the primary device the active source if the option is set
   if (m_configuration.bActivateSource == 1)
     GetPrimaryDevice()->ActivateSource(500);
+#endif
 
   return true;
 }
